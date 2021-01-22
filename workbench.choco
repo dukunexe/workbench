@@ -81,31 +81,31 @@ Get-AppxPackage "king.com.CandyCrushSodaSaga" | Remove-AppxPackage
 
 # Packages
 choco feature enable -n allowGlobalConfirmation
-choco install git --cacheLocation $env:TEMP
-choco install vscode --cacheLocation $env:TEMP
-choco install sysinternals --params "/InstallDir:C:\tools\sysinternals" --cacheLocation $env:TEMP
-choco install googlechrome --ignore-checksums --cacheLocation $env:TEMP
-choco install 7zip --cacheLocation $env:TEMP
-choco install heidisql --version=10.2.0.559900 --cacheLocation $env:TEMP
-choco install putty --cacheLocation $env:TEMP
-choco install firefox --cacheLocation $env:TEMP
-choco install vlc --cacheLocation $env:TEMP
-choco install python2 --cacheLocation $env:TEMP
-choco install python3 --cacheLocation $env:TEMP
-choco install filezilla --cacheLocation $env:TEMP
-choco install winscp --cacheLocation $env:TEMP
-choco install wireshark --cacheLocation $env:TEMP
-choco install hxd --cacheLocation $env:TEMP
-choco install dnspy --cacheLocation $env:TEMP
-choco install openvpn --cacheLocation $env:TEMP
-choco install mingw --cacheLocation $env:TEMP
-choco install nmap --cacheLocation $env:TEMP
-choco install burp-suite-free-edition --cacheLocation $env:TEMP
-choco install visualstudio2019community --cacheLocation $env:TEMP
-choco install visualstudio2019buildtools --cacheLocation $env:TEMP
-choco install visualstudio2019-workload-manageddesktop --cacheLocation $env:TEMP
-choco install visualstudio2019-workload-nativedesktop --cacheLocation $env:TEMP
-choco install windows-sdk-10.1 --cacheLocation $env:TEMP
+choco install git --cacheLocation="C:\Temp"
+choco install vscode --cacheLocation="C:\Temp"
+choco install sysinternals --params "/InstallDir:C:\tools\sysinternals" --cacheLocation="C:\Temp"
+choco install googlechrome --ignore-checksums --cacheLocation="C:\Temp"
+choco install 7zip --cacheLocation="C:\Temp"
+choco install heidisql --version=10.2.0.559900 --cacheLocation="C:\Temp"
+choco install putty --cacheLocation="C:\Temp"
+choco install firefox --cacheLocation="C:\Temp"
+choco install vlc --cacheLocation="C:\Temp"
+choco install python2 --cacheLocation="C:\Temp"
+choco install python3 --cacheLocation="C:\Temp"
+choco install filezilla --cacheLocation="C:\Temp"
+choco install winscp --cacheLocation="C:\Temp"
+choco install wireshark --cacheLocation="C:\Temp"
+choco install hxd --cacheLocation="C:\Temp"
+choco install dnspy --cacheLocation="C:\Temp"
+choco install openvpn --cacheLocation="C:\Temp"
+choco install mingw --cacheLocation="C:\Temp"
+choco install nmap --cacheLocation="C:\Temp"
+choco install burp-suite-free-edition --cacheLocation="C:\Temp"
+choco install visualstudio2019community --cacheLocation="C:\Temp"
+choco install visualstudio2019buildtools --cacheLocation="C:\Temp"
+choco install visualstudio2019-workload-manageddesktop --cacheLocation="C:\Temp"
+choco install visualstudio2019-workload-nativedesktop --cacheLocation="C:\Temp"
+choco install windows-sdk-10.1 --cacheLocation="C:\Temp"
 
 
 # GitHub
