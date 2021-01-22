@@ -86,25 +86,32 @@ choco install git
 choco install vscode
 choco install sysinternals --params "/InstallDir:C:\tools\sysinternals"
 choco install googlechrome --ignore-checksums
+rmdir -Force -Recurse $env:TMP\chocolatey
 choco install 7zip
 choco install heidisql --version=10.2.0.559900
 choco install putty
 choco install firefox
+rmdir -Force -Recurse $env:TMP\chocolatey
 choco install vlc
 choco install python2
 choco install python3
 choco install filezilla
+rmdir -Force -Recurse $env:TMP\chocolatey
 choco install winscp
 choco install wireshark
 choco install hxd
 choco install dnspy
+rmdir -Force -Recurse $env:TMP\chocolatey
 choco install openvpn
 choco install mingw
+choco install nmap
 choco install burp-suite-free-edition
+rmdir -Force -Recurse $env:TMP\chocolatey
 choco install visualstudio2019community
 choco install visualstudio2019buildtools
 choco install visualstudio2019-workload-manageddesktop
 choco install visualstudio2019-workload-nativedesktop
+rmdir -Force -Recurse $env:TMP\chocolatey
 choco install windows-sdk-10.1
 
 
