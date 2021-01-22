@@ -1,6 +1,5 @@
-#New-Item -Path C:\ -Name Temp -ItemType Directory -ErrorAction SilentlyContinue
-#$env:TEMP = "C:\Temp"
-#$env:TMP = "C:\Temp"
+New-Item -Path C:\ -Name Temp -ItemType Directory -ErrorAction SilentlyContinue
+$env:TEMP = "C:\Temp"
 
 Remove-ItemProperty -Path HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run -Name bginfo -ErrorAction SilentlyContinue
 Remove-Item C:\BGinfo\ -Recurse -Force -ErrorAction SilentlyContinue
@@ -82,32 +81,31 @@ Get-AppxPackage "king.com.CandyCrushSodaSaga" | Remove-AppxPackage
 
 # Packages
 choco feature enable -n allowGlobalConfirmation
-choco install git
-choco install vscode
-choco install sysinternals --params "/InstallDir:C:\tools\sysinternals"
-choco install googlechrome --ignore-checksums
-choco install 7zip
-choco install heidisql --version=10.2.0.559900
-choco install putty
-choco install firefox
-choco install vlc
-choco install python2
-choco install python3
-choco install filezilla
-choco install winscp
-choco install wireshark
-choco install hxd
-choco install dnspy
-rmdir -Force -Recurse $env:TMP
-choco install openvpn
-choco install mingw
-choco install nmap
-choco install burp-suite-free-edition
-choco install visualstudio2019community
-choco install visualstudio2019buildtools
-choco install visualstudio2019-workload-manageddesktop
-choco install visualstudio2019-workload-nativedesktop
-choco install windows-sdk-10.1
+choco install git --cacheLocation $env:TEMP
+choco install vscode --cacheLocation $env:TEMP
+choco install sysinternals --params "/InstallDir:C:\tools\sysinternals" --cacheLocation $env:TEMP
+choco install googlechrome --ignore-checksums --cacheLocation $env:TEMP
+choco install 7zip --cacheLocation $env:TEMP
+choco install heidisql --version=10.2.0.559900 --cacheLocation $env:TEMP
+choco install putty --cacheLocation $env:TEMP
+choco install firefox --cacheLocation $env:TEMP
+choco install vlc --cacheLocation $env:TEMP
+choco install python2 --cacheLocation $env:TEMP
+choco install python3 --cacheLocation $env:TEMP
+choco install filezilla --cacheLocation $env:TEMP
+choco install winscp --cacheLocation $env:TEMP
+choco install wireshark --cacheLocation $env:TEMP
+choco install hxd --cacheLocation $env:TEMP
+choco install dnspy --cacheLocation $env:TEMP
+choco install openvpn --cacheLocation $env:TEMP
+choco install mingw --cacheLocation $env:TEMP
+choco install nmap --cacheLocation $env:TEMP
+choco install burp-suite-free-edition --cacheLocation $env:TEMP
+choco install visualstudio2019community --cacheLocation $env:TEMP
+choco install visualstudio2019buildtools --cacheLocation $env:TEMP
+choco install visualstudio2019-workload-manageddesktop --cacheLocation $env:TEMP
+choco install visualstudio2019-workload-nativedesktop --cacheLocation $env:TEMP
+choco install windows-sdk-10.1 --cacheLocation $env:TEMP
 
 
 # GitHub
