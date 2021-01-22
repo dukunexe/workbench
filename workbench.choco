@@ -83,7 +83,7 @@ Get-AppxPackage "king.com.CandyCrushSodaSaga" | Remove-AppxPackage
 # Packages
 choco feature enable -n allowGlobalConfirmation
 choco install git
-choco install sublimetext3
+choco install vscode
 choco install sysinternals --params "/InstallDir:C:\tools\sysinternals"
 choco install googlechrome --ignore-checksums
 choco install 7zip
@@ -98,15 +98,19 @@ choco install winscp
 choco install wireshark
 choco install hxd
 choco install dnspy
-choco install ilspy
 choco install openvpn
 choco install mingw
 choco install burp-suite-free-edition
+choco install visualstudio2019community
+choco install visualstudio2019buildtools
+choco install visualstudio2019-workload-manageddesktop
+choco install visualstudio2019-workload-nativedesktop
+choco install windows-sdk-10.1
+
 
 # GitHub
 git clone https://github.com/TheWover/donut.git C:\tools\donut
-git clone https://github.com/tyranid/DotNetToJScript.git C:\tools\DotNetToJScript
-git clone https://github.com/danielbohannon/Invoke-Obfuscation.git C:\tools\Invoke-Obfuscation
+git clone https://github.com/med0x2e/GadgetToJScript.git C:\tools\GadgetToJScript
 git clone https://github.com/dafthack/MailSniper.git C:\tools\MailSniper
 git clone https://github.com/gentilkiwi/mimikatz.git C:\tools\mimikatz
 git clone https://github.com/rasta-mouse/MiscTools.git C:\tools\MiscTools
@@ -142,13 +146,7 @@ Invoke-WebRequest -Uri 'https://neo4j.com/artifact.php?name=neo4j-community-4.0.
 Expand-Archive -Path "$env:TEMP\neo4j.zip" -DestinationPath C:\tools\
 Rename-Item -Path C:\tools\neo4j-community-4.0.0\ -NewName Neo4j
 
-# Visual Studio
-$html = (New-Object Net.WebClient).DownloadString('https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=Community&rel=16')
-$url = [regex]::Match($html, '(https).*(vs_Community.exe)').Captures.Groups[0].Value
-Invoke-WebRequest -Uri $url -OutFile "$Downloads\vs_Community.exe" -ErrorAction Continue
-Invoke-WebRequest -Uri 'https://marketplace.visualstudio.com/_apis/public/gallery/publishers/VisualStudioClient/vsextensions/MicrosoftVisualStudio2017InstallerProjects/0.9.6/vspackage' -OutFile "$Downloads\InstallerProjects.vsix" -ErrorAction Continue
-Invoke-WebRequest -Uri 'https://download.microsoft.com/download/E/E/D/EEDF18A8-4AED-4CE0-BEBE-70A83094FC5A/BuildTools_Full.exe' -OutFile "$Downloads\BuildTools.exe" -ErrorAction Continue
-Invoke-WebRequest -Uri 'https://go.microsoft.com/fwlink/p/?LinkId=323507' -OutFile "$Downloads\SDK8.exe" -ErrorAction Continue
+# .NET
 Enable-WindowsOptionalFeature -FeatureName NetFx3 -Online
 
 # WinRM and RDP without network level auth
